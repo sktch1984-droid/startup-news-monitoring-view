@@ -177,15 +177,15 @@
                     <div class="step-number">02</div>
                     <div class="step-content glass-card">
                         <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Analyze</h3>
-<p><strong>대표 기사 선별 및 요약</strong></p>
-<p><strong>수집된 뉴스 후보군</strong> → 2-pass 중복 제거 → 3-tier 대표기사 선정 → <strong>핵심 기사 선별</strong></p>
-<ul style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; line-height: 1.7; padding-left: 1.2em;">
-  <li><strong>Pass 1 — 제목 유사도</strong>: SequenceMatcher ratio ≥ 0.88 · 포함관계(길이비율 ≥ 0.75) 중복 제거</li>
-  <li><strong>Pass 2 — 이슈 그룹</strong>: event_type(launch/partnership/adoption 등) + topic_labels 시그니처로 동일 이슈 단일화</li>
-  <li><strong>브리프·단신·제너릭 제외</strong>: [브리프] · 뉴스픽 · 모집 · 설명회 등 패턴 필터</li>
-  <li><strong>대표기사 선정 우선순위</strong>: ① 제목 내 기업명 직접 포함 → ② title match reason → ③ 최신 기사</li>
-</ul>
-<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; line-height: 1.4;">별도 LLM 호출 없이 Naver API <code>description</code>을 요약으로 활용 (최대 300자 · 미존재 시 제목 fallback)</p>
+                        <p><strong>대표 기사 선별 및 요약</strong></p>
+                        <p><strong>수집된 뉴스 후보군</strong> → 2-pass 중복 제거 → 3-tier 대표기사 선정 → <strong>핵심 기사 선별</strong></p>
+                        <ul style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px; line-height: 1.7; padding-left: 1.5em;">
+                          <li><strong>Phase 1 — 제목 유사도</strong>: SequenceMatcher ratio ≥ 0.88 · 포함관계(길이비율 ≥ 0.75) 중복 제거</li>
+                          <li><strong>Phase 2 — 이슈 그룹</strong>: event_type(launch/partnership/adoption 등) + topic_labels 시그니처로 동일 이슈 단일화</li>
+                          <li><strong>Phase 3 — 브리프·단신·제너릭 제외</strong>: [브리프] · 뉴스픽 · 모집 · 설명회 등 패턴 필터</li>
+                          <li><strong>Phase 4 — 대표기사 선정 우선순위</strong>: ① 제목 내 기업명 직접 포함 → ② title match reason → ③ 최신 기사</li>
+                        </ul>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; line-height: 1.4;">별도 LLM 호출 없이 Naver API <code>description</code>을 요약으로 활용 (최대 300자 · 미존재 시 제목 fallback)</p>
                     </div>
                 </div>
 
