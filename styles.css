@@ -382,6 +382,12 @@ h1, h2, h3, h4, .badge, .step-number, .impact-value {
     .section-header h2 { font-size: 2rem; }
 
     .step-content { padding: 20px 16px; }
+    .monitoring-db-table { table-layout: fixed; font-size: 0.68rem !important; }
+    .monitoring-db-table th, .monitoring-db-table td {
+        white-space: normal !important;
+        word-break: break-all;
+        padding: 6px 4px !important;
+    }
     .analyze-detail-funnel { margin: 24px 0 0; width: 100%; }
     .analyze-detail-funnel .funnel-layer,
     .analyze-detail-funnel .layer-1,
