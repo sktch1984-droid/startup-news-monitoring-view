@@ -380,4 +380,17 @@ h1, h2, h3, h4, .badge, .step-number, .impact-value {
     .layer-desc { text-align: center; }
     .main-title { font-size: 2.5rem; }
     .section-header h2 { font-size: 2rem; }
+
+    .step-content { padding: 20px 16px; }
+    .analyze-detail-funnel { margin: 24px 0 0; width: 100%; }
+    .analyze-detail-funnel .funnel-layer,
+    .analyze-detail-funnel .layer-1,
+    .analyze-detail-funnel .layer-2,
+    .analyze-detail-funnel .layer-3 {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 6px;
+    }
+    .analyze-detail-funnel .layer-title { text-align: center; }
 }
